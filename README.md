@@ -27,8 +27,6 @@ Backend
 Aplicação Spring Boot com endpoints REST para receber, processar e retornar os dados dos contatos.
 Possível integração com banco de dados para persistência dos contatos cadastrados.
 Estrutura de Pastas
-bash
-Copiar código
 /contatos
 ├── frontend
 │   ├── index.html        # Página principal com o formulário
@@ -44,6 +42,7 @@ Copiar código
         │   │       └── ContatoService.java     # Serviço (opcional)
         │   └── resources
         │       └── application.properties      # Configurações do Spring Boot
+
 Como Executar o Projeto
 Backend
 Pré-requisitos:
