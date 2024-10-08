@@ -1,40 +1,54 @@
-Projeto Contatos
-Este projeto Contatos foi desenvolvido para fins de estudo, explorando a integração entre um frontend simples em HTML, CSS e JavaScript e um backend em Java Spring Boot. A aplicação permite o cadastro de contatos e a consulta dos mesmos através de requisições HTTP com dados em formato JSON.
+<h1>Projeto Contatos</h1>
 
-Índice
-Objetivo do Projeto
-Tecnologias Utilizadas
-Funcionalidades
-Estrutura do Projeto
-Como Executar o Projeto
-Executar o Backend
-Executar o Frontend
-Melhorias Futuras
-Contribuições
-Licença
-Objetivo do Projeto
-O objetivo deste projeto é estudar a comunicação entre frontend e backend utilizando requisições HTTP, JSON e o framework Spring Boot. O foco está no envio e recebimento de dados entre cliente e servidor.
+<p>Este projeto <strong>Contatos</strong> foi desenvolvido para fins de estudo, explorando a integração entre um frontend simples em <strong>HTML, CSS e JavaScript</strong> e um backend em <strong>Java Spring Boot</strong>. A aplicação permite o cadastro de contatos e a consulta dos mesmos através de requisições HTTP com dados em formato <strong>JSON</strong>.</p>
 
-Tecnologias Utilizadas
-Frontend:
-HTML5: Estrutura do formulário.
-CSS3: Estilização da página.
-JavaScript (ES6): Comunicação com o backend usando fetch.
-Backend:
-Java 17: Linguagem utilizada.
-Spring Boot: Framework para a criação de APIs RESTful.
-Spring Web: Para gerenciamento de endpoints HTTP.
-Spring Data JPA (opcional): Persistência de dados (opcional).
-MySQL (opcional): Banco de dados para armazenar os contatos (opcional).
-Funcionalidades
-Cadastro de Contato: O frontend permite o envio de informações de contato (nome, sobrenome, celular e email) ao backend, onde os dados são processados e, eventualmente, armazenados.
-Consulta de Contatos: O backend pode retornar uma lista dos contatos cadastrados, permitindo a consulta via requisição GET.
-Estrutura do Projeto
-O projeto está organizado em dois diretórios principais: frontend e backend.
+<h2>Índice</h2>
+<ul>
+    <li><a href="#objetivo-do-projeto">Objetivo do Projeto</a></li>
+    <li><a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a></li>
+    <li><a href="#funcionalidades">Funcionalidades</a></li>
+    <li><a href="#estrutura-do-projeto">Estrutura do Projeto</a></li>
+    <li><a href="#como-executar-o-projeto">Como Executar o Projeto</a></li>
+    <ul>
+        <li><a href="#executar-o-backend">Executar o Backend</a></li>
+        <li><a href="#executar-o-frontend">Executar o Frontend</a></li>
+    </ul>
+    <li><a href="#melhorias-futuras">Melhorias Futuras</a></li>
+    <li><a href="#contribuicoes">Contribuições</a></li>
+    <li><a href="#licenca">Licença</a></li>
+</ul>
 
-bash
-Copiar código
-contatos/
+<h2 id="objetivo-do-projeto">Objetivo do Projeto</h2>
+<p>O objetivo deste projeto é estudar a comunicação entre frontend e backend utilizando requisições HTTP, JSON e o framework Spring Boot. O foco está no envio e recebimento de dados entre cliente e servidor.</p>
+
+<h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+
+<h3>Frontend:</h3>
+<ul>
+    <li><strong>HTML5</strong>: Estrutura do formulário.</li>
+    <li><strong>CSS3</strong>: Estilização da página.</li>
+    <li><strong>JavaScript (ES6)</strong>: Comunicação com o backend usando <code>fetch</code>.</li>
+</ul>
+
+<h3>Backend:</h3>
+<ul>
+    <li><strong>Java 17</strong>: Linguagem utilizada.</li>
+    <li><strong>Spring Boot</strong>: Framework para a criação de APIs RESTful.</li>
+    <li><strong>Spring Web</strong>: Para gerenciamento de endpoints HTTP.</li>
+    <li><strong>Spring Data JPA</strong> (opcional): Persistência de dados (opcional).</li>
+    <li><strong>MySQL</strong> (opcional): Banco de dados para armazenar os contatos (opcional).</li>
+</ul>
+
+<h2 id="funcionalidades">Funcionalidades</h2>
+<ul>
+    <li><strong>Cadastro de Contato</strong>: O frontend permite o envio de informações de contato (nome, sobrenome, celular e email) ao backend, onde os dados são processados e, eventualmente, armazenados.</li>
+    <li><strong>Consulta de Contatos</strong>: O backend pode retornar uma lista dos contatos cadastrados, permitindo a consulta via requisição GET.</li>
+</ul>
+
+<h2 id="estrutura-do-projeto">Estrutura do Projeto</h2>
+<p>O projeto está organizado em dois diretórios principais: <strong>frontend</strong> e <strong>backend</strong>.</p>
+
+<pre><code>contatos/
 ├── backend/                     # Código do backend (Spring Boot)
 │   ├── src/
 │   │   ├── main/
@@ -49,44 +63,42 @@ contatos/
 │   ├── script.js                # Código JS para as requisições
 │   └── README_FRONTEND.md        # Documentação exclusiva do frontend (opcional)
 └── README.md                    # README principal com a visão geral do projeto
-Como Executar o Projeto
-Pré-requisitos
-Backend: Para executar o backend, você precisa de Java 17 ou superior, e Maven para gerenciar as dependências.
-Frontend: Um navegador moderno para executar a página HTML e interagir com o backend.
-Executar o Backend
-Clone este repositório:
+</code></pre>
 
-bash
-Copiar código
-git clone https://github.com/seu-usuario/contatos.git
-Navegue até a pasta do backend:
+<h2 id="como-executar-o-projeto">Como Executar o Projeto</h2>
 
-bash
-Copiar código
-cd contatos/backend
-Execute a aplicação Spring Boot:
+<h3 id="executar-o-backend">Executar o Backend</h3>
+<ol>
+    <li>Clone este repositório:
+        <pre><code>git clone https://github.com/seu-usuario/contatos.git</code></pre>
+    </li>
+    <li>Navegue até a pasta do backend:
+        <pre><code>cd contatos/backend</code></pre>
+    </li>
+    <li>Execute a aplicação Spring Boot:
+        <pre><code>mvn spring-boot:run</code></pre>
+    </li>
+    <li>O backend ficará disponível em <code>http://localhost:8087</code>.</li>
+</ol>
 
-bash
-Copiar código
-mvn spring-boot:run
-O backend ficará disponível em http://localhost:8087.
+<h3 id="executar-o-frontend">Executar o Frontend</h3>
+<ol>
+    <li>Abra o arquivo <code>index.html</code> localizado na pasta <code>frontend</code> em um navegador:
+        <pre><code>open frontend/index.html</code></pre>
+    </li>
+    <li>Preencha o formulário de cadastro e clique em "Cadastrar". Os dados serão enviados ao backend em formato JSON.</li>
+</ol>
 
-Executar o Frontend
-Abra o arquivo index.html localizado na pasta frontend em um navegador:
+<h2 id="melhorias-futuras">Melhorias Futuras</h2>
+<ul>
+    <li>Implementação de uma interface para listar e consultar os contatos cadastrados.</li>
+    <li>Persistência dos dados em um banco de dados (como MySQL ou H2).</li>
+    <li>Adição de validação de dados no frontend e backend.</li>
+    <li>Implementação de autenticação e autorização utilizando Spring Security.</li>
+</ul>
 
-bash
-Copiar código
-open frontend/index.html
-Preencha o formulário de cadastro e clique em "Cadastrar". Os dados serão enviados ao backend em formato JSON.
+<h2 id="contribuicoes">Contribuições</h2>
+<p>Contribuições são bem-vindas! Caso tenha interesse em contribuir, abra uma issue ou envie um pull request.</p>
 
-Melhorias Futuras
-Implementação de uma interface para listar e consultar os contatos cadastrados.
-Persistência dos dados em um banco de dados (como MySQL ou H2).
-Adição de validação de dados no frontend e backend.
-Implementação de autenticação e autorização utilizando Spring Security.
-Contribuições
-Contribuições são bem-vindas! Caso tenha interesse em contribuir, abra uma issue ou envie um pull request.
-
-Licença
-Este projeto está licenciado sob a MIT License.
-
+<h2 id="licenca">Licença</h2>
+<p>Este projeto está licenciado sob a <a href="LICENSE">MIT License</a>.</p>
