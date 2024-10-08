@@ -1,79 +1,92 @@
 Projeto Contatos
-O projeto Contatos foi desenvolvido para fins de estudo, com o objetivo de explorar a integração entre um frontend simples em HTML, CSS e JavaScript e um backend desenvolvido em Java Spring Boot. O projeto permite o cadastro de contatos por meio de um formulário, com os dados enviados em formato JSON para o backend, que realiza o processamento e armazenamento dos contatos.
+Este projeto Contatos foi desenvolvido para fins de estudo, explorando a integração entre um frontend simples em HTML, CSS e JavaScript e um backend em Java Spring Boot. A aplicação permite o cadastro de contatos e a consulta dos mesmos através de requisições HTTP com dados em formato JSON.
 
+Índice
 Objetivo do Projeto
-O foco principal deste projeto é a comunicação entre frontend e backend utilizando requisições HTTP e o envio/recebimento de dados no formato JSON. Além disso, explora-se o fluxo completo de uma aplicação web simples.
+Tecnologias Utilizadas
+Funcionalidades
+Estrutura do Projeto
+Como Executar o Projeto
+Executar o Backend
+Executar o Frontend
+Melhorias Futuras
+Contribuições
+Licença
+Objetivo do Projeto
+O objetivo deste projeto é estudar a comunicação entre frontend e backend utilizando requisições HTTP, JSON e o framework Spring Boot. O foco está no envio e recebimento de dados entre cliente e servidor.
 
 Tecnologias Utilizadas
 Frontend:
-HTML: Estrutura do formulário de cadastro.
-CSS: Estilização da página.
-JavaScript: Comunicação com o backend via requisições fetch em JSON.
+HTML5: Estrutura do formulário.
+CSS3: Estilização da página.
+JavaScript (ES6): Comunicação com o backend usando fetch.
 Backend:
-Java 17: Linguagem de programação utilizada no backend.
-Spring Boot: Framework para facilitar o desenvolvimento da API RESTful.
-Spring Web: Para a criação de endpoints que recebem e retornam JSON.
-Spring Data JPA (opcional): Para persistência de dados.
-MySQL (opcional): Banco de dados para armazenar os contatos.
+Java 17: Linguagem utilizada.
+Spring Boot: Framework para a criação de APIs RESTful.
+Spring Web: Para gerenciamento de endpoints HTTP.
+Spring Data JPA (opcional): Persistência de dados (opcional).
+MySQL (opcional): Banco de dados para armazenar os contatos (opcional).
 Funcionalidades
-Cadastro de Contato: O frontend permite o cadastro de um novo contato com nome, sobrenome, celular e email. Esses dados são enviados ao backend em formato JSON.
-Consulta de Contatos: Os contatos cadastrados podem ser consultados através de uma requisição GET, retornando a lista de contatos.
+Cadastro de Contato: O frontend permite o envio de informações de contato (nome, sobrenome, celular e email) ao backend, onde os dados são processados e, eventualmente, armazenados.
+Consulta de Contatos: O backend pode retornar uma lista dos contatos cadastrados, permitindo a consulta via requisição GET.
 Estrutura do Projeto
-Frontend
-Formulário em HTML para o cadastro dos contatos.
-CSS para a estilização da interface.
-JavaScript para realizar requisições HTTP (fetch) e enviar os dados para o backend.
-Backend
-Aplicação Spring Boot com endpoints REST para receber, processar e retornar os dados dos contatos.
-Possível integração com banco de dados para persistência dos contatos cadastrados.
-Estrutura de Pastas
-/contatos
-├── frontend
-│   ├── index.html        # Página principal com o formulário
-│   ├── style.css         # Estilos para a página HTML
-│   └── script.js         # Lógica JavaScript para realizar as requisições
-└── backend
-    └── src
-        ├── main
-        │   ├── java
-        │   │   └── com.contactsapi
-        │   │       ├── Contato.java            # Entidade Contato
-        │   │       ├── ContatoController.java  # Controlador REST
-        │   │       └── ContatoService.java     # Serviço (opcional)
-        │   └── resources
-        │       └── application.properties      # Configurações do Spring Boot
+O projeto está organizado em dois diretórios principais: frontend e backend.
 
+bash
+Copiar código
+contatos/
+├── backend/                     # Código do backend (Spring Boot)
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/contactsapi/     # Pacotes Java do projeto
+│   │   │   └── resources/
+│   │   │       └── application.properties
+│   ├── pom.xml                  # Dependências Maven do backend
+│   └── README_BACKEND.md         # Documentação exclusiva do backend (opcional)
+├── frontend/                    # Código do frontend (HTML/CSS/JS)
+│   ├── index.html               # Página HTML com formulário de cadastro
+│   ├── style.css                # Estilos da página HTML
+│   ├── script.js                # Código JS para as requisições
+│   └── README_FRONTEND.md        # Documentação exclusiva do frontend (opcional)
+└── README.md                    # README principal com a visão geral do projeto
 Como Executar o Projeto
-Backend
-Pré-requisitos:
+Pré-requisitos
+Backend: Para executar o backend, você precisa de Java 17 ou superior, e Maven para gerenciar as dependências.
+Frontend: Um navegador moderno para executar a página HTML e interagir com o backend.
+Executar o Backend
+Clone este repositório:
 
-Java 17 ou superior
-Spring Boot
-Execução:
+bash
+Copiar código
+git clone https://github.com/seu-usuario/contatos.git
+Navegue até a pasta do backend:
 
-Clone este repositório.
-Navegue até o diretório do backend e execute o comando para rodar a aplicação Spring Boot:
+bash
+Copiar código
+cd contatos/backend
+Execute a aplicação Spring Boot:
+
 bash
 Copiar código
 mvn spring-boot:run
 O backend ficará disponível em http://localhost:8087.
-Frontend
-Pré-requisitos:
 
-Navegador moderno
-Execução:
+Executar o Frontend
+Abra o arquivo index.html localizado na pasta frontend em um navegador:
 
-Abra o arquivo index.html no navegador para acessar o frontend.
-Teste:
+bash
+Copiar código
+open frontend/index.html
+Preencha o formulário de cadastro e clique em "Cadastrar". Os dados serão enviados ao backend em formato JSON.
 
-Preencha o formulário de cadastro de contatos e envie os dados. Eles serão enviados ao backend e processados.
 Melhorias Futuras
-Implementar uma interface para listar e consultar os contatos cadastrados.
-Integrar um banco de dados (MySQL ou H2) para persistência.
-Adicionar validação de dados mais robusta no frontend e backend.
-Implementar autenticação e autorização com Spring Security.
+Implementação de uma interface para listar e consultar os contatos cadastrados.
+Persistência dos dados em um banco de dados (como MySQL ou H2).
+Adição de validação de dados no frontend e backend.
+Implementação de autenticação e autorização utilizando Spring Security.
 Contribuições
-Contribuições são bem-vindas! Abra issues e envie pull requests para melhorias no projeto.
+Contribuições são bem-vindas! Caso tenha interesse em contribuir, abra uma issue ou envie um pull request.
 
 Licença
-Este projeto é distribuído sob a licença MIT License.
+Este projeto está licenciado sob a MIT License.
+
